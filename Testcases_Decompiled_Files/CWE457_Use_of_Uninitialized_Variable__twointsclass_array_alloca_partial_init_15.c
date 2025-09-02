@@ -1,0 +1,839 @@
+
+void printIntLine(uint param_1)
+
+{
+  printf("%d\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+ulong decodeHexChars(long param_1,ulong param_2,long param_3)
+
+{
+  ushort **ppuVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2)] & 0x1000) == 0) break;
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2 + 1)] & 0x1000) == 0) break;
+    __isoc99_sscanf(local_18 * 2 + param_3,&DAT_00103090,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+undefined8 globalReturnsTrue(void)
+
+{
+  return 1;
+}
+
+
+
+
+undefined8 globalReturnsFalse(void)
+
+{
+  return 0;
+}
+
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)PTR_00104f30)();
+  return;
+}
+
+
+
+
+void good8(void)
+
+{
+  return;
+}
+
+
+
+
+void internal_start(long param_1)
+
+{
+  (**(code **)(param_1 + 8))(*(undefined8 *)(param_1 + 0x10));
+                    /* WARNING: Subroutine does not return */
+  pthread_exit((void *)0x0);
+}
+
+
+
+
+void good6(void)
+
+{
+  return;
+}
+
+
+
+
+void printWcharLine(undefined4 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  local_18 = param_1;
+  printf("%ls\n",&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::bad() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::bad(void)
+
+{
+  undefined4 uVar1;
+  undefined *puVar2;
+  long in_FS_OFFSET;
+  undefined auStack_28 [8];
+  int local_20;
+  int local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (puVar2 = auStack_28; puVar2 != auStack_28; puVar2 = puVar2 + -0x1000) {
+    *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  }
+  *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  local_18 = (ulong)(puVar2 + -0x51) & 0xfffffffffffffff0;
+  for (local_20 = 0; local_20 < 5; local_20 = local_20 + 1) {
+    *(int *)((long)local_20 * 8 + local_18) = local_20;
+    *(int *)((long)local_20 * 8 + local_18 + 4) = local_20;
+  }
+  for (local_1c = 0; local_1c < 10; local_1c = local_1c + 1) {
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8);
+    *(undefined8 *)(puVar2 + -0x68) = 0x1014ba;
+    printIntLine(uVar1);
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8 + 4);
+    *(undefined8 *)(puVar2 + -0x68) = 0x1014d8;
+    printIntLine(uVar1);
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(puVar2 + -0x68) = 0x1014f4;
+  __stack_chk_fail();
+}
+
+
+
+
+void printShortLine(short param_1)
+
+{
+  printf("%hd\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void printHexUnsignedCharLine(byte param_1)
+
+{
+  printf("%02x\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void good7(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 stdThreadLockCreate(undefined8 *param_1)
+
+{
+  int iVar1;
+  pthread_mutex_t *__mutex;
+  undefined8 uVar2;
+  
+  *param_1 = 0;
+  __mutex = (pthread_mutex_t *)malloc(0x28);
+  if (__mutex == (pthread_mutex_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    iVar1 = pthread_mutex_init(__mutex,(pthread_mutexattr_t *)0x0);
+    if (iVar1 == 0) {
+      *param_1 = __mutex;
+      uVar2 = 1;
+    }
+    else {
+      free(param_1);
+      uVar2 = 0;
+    }
+  }
+  return uVar2;
+}
+
+
+
+
+void printLongLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void good1(void)
+
+{
+  return;
+}
+
+
+
+
+void stdThreadLockRelease(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_unlock(param_1);
+  return;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodG2B2() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodG2B2(void)
+
+{
+  undefined4 uVar1;
+  undefined *puVar2;
+  long in_FS_OFFSET;
+  undefined auStack_28 [8];
+  int local_20;
+  int local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (puVar2 = auStack_28; puVar2 != auStack_28; puVar2 = puVar2 + -0x1000) {
+    *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  }
+  *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  local_18 = (ulong)(puVar2 + -0x51) & 0xfffffffffffffff0;
+  for (local_20 = 0; local_20 < 10; local_20 = local_20 + 1) {
+    *(int *)((long)local_20 * 8 + local_18) = local_20;
+    *(int *)((long)local_20 * 8 + local_18 + 4) = local_20;
+  }
+  for (local_1c = 0; local_1c < 10; local_1c = local_1c + 1) {
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8);
+    *(undefined8 *)(puVar2 + -0x68) = 0x101a7a;
+    printIntLine(uVar1);
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8 + 4);
+    *(undefined8 *)(puVar2 + -0x68) = 0x101a98;
+    printIntLine(uVar1);
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(puVar2 + -0x68) = 0x101ab4;
+  __stack_chk_fail();
+}
+
+
+
+
+void bad9(void)
+
+{
+  return;
+}
+
+
+
+
+void printDoubleLine(undefined8 param_1)
+
+{
+  printf("%g\n",param_1);
+  return;
+}
+
+
+
+
+void bad2(void)
+
+{
+  return;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodB2G1() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodB2G1(void)
+
+{
+  undefined4 uVar1;
+  undefined *puVar2;
+  long in_FS_OFFSET;
+  undefined auStack_28 [4];
+  int local_24;
+  int local_20;
+  int local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (puVar2 = auStack_28; puVar2 != auStack_28; puVar2 = puVar2 + -0x1000) {
+    *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  }
+  *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  local_18 = (ulong)(puVar2 + -0x51) & 0xfffffffffffffff0;
+  for (local_24 = 0; local_24 < 5; local_24 = local_24 + 1) {
+    *(int *)((long)local_24 * 8 + local_18) = local_24;
+    *(int *)((long)local_24 * 8 + local_18 + 4) = local_24;
+  }
+  for (local_20 = 0; local_20 < 10; local_20 = local_20 + 1) {
+    *(int *)((long)local_20 * 8 + local_18) = local_20;
+    *(int *)((long)local_20 * 8 + local_18 + 4) = local_20;
+  }
+  for (local_1c = 0; local_1c < 10; local_1c = local_1c + 1) {
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8);
+    *(undefined8 *)(puVar2 + -0x68) = 0x10164d;
+    printIntLine(uVar1);
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8 + 4);
+    *(undefined8 *)(puVar2 + -0x68) = 0x10166b;
+    printIntLine(uVar1);
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(puVar2 + -0x68) = 0x101687;
+  __stack_chk_fail();
+}
+
+
+
+
+int globalReturnsTrueOrFalse(void)
+
+{
+  int iVar1;
+  
+  iVar1 = rand();
+  return iVar1 % 2;
+}
+
+
+
+
+void bad1(void)
+
+{
+  return;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodG2B1() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodG2B1(void)
+
+{
+  undefined4 uVar1;
+  undefined *puVar2;
+  long in_FS_OFFSET;
+  undefined auStack_28 [8];
+  int local_20;
+  int local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (puVar2 = auStack_28; puVar2 != auStack_28; puVar2 = puVar2 + -0x1000) {
+    *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  }
+  *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  local_18 = (ulong)(puVar2 + -0x51) & 0xfffffffffffffff0;
+  for (local_20 = 0; local_20 < 10; local_20 = local_20 + 1) {
+    *(int *)((long)local_20 * 8 + local_18) = local_20;
+    *(int *)((long)local_20 * 8 + local_18 + 4) = local_20;
+  }
+  for (local_1c = 0; local_1c < 10; local_1c = local_1c + 1) {
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8);
+    *(undefined8 *)(puVar2 + -0x68) = 0x10192d;
+    printIntLine(uVar1);
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8 + 4);
+    *(undefined8 *)(puVar2 + -0x68) = 0x10194b;
+    printIntLine(uVar1);
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(puVar2 + -0x68) = 0x101967;
+  __stack_chk_fail();
+}
+
+
+
+
+void printStructLine(uint *param_1)
+
+{
+  printf("%d -- %d\n",(ulong)*param_1,(ulong)param_1[1]);
+  return;
+}
+
+
+
+
+ulong decodeHexWChars(long param_1,ulong param_2,long param_3)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8));
+    if (iVar1 == 0) break;
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8 + 4));
+    if (iVar1 == 0) break;
+    __isoc99_swscanf(local_18 * 8 + param_3,&DAT_00103098,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_00101170(void)
+
+{
+  (*(code *)PTR___cxa_finalize_00104ff8)();
+  return;
+}
+
+
+
+
+void printLine(char *param_1)
+
+{
+  if (param_1 != (char *)0x0) {
+    puts(param_1);
+  }
+  return;
+}
+
+
+
+
+void printLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void bad8(void)
+
+{
+  return;
+}
+
+
+
+
+void printBytesLine(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  puts("");
+  return;
+}
+
+
+
+
+void good5(void)
+
+{
+  return;
+}
+
+
+
+
+void bad7(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 stdThreadCreate(pthread_t param_1,pthread_t param_2,undefined8 *param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  pthread_t local_20;
+  pthread_t *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  *param_3 = 0;
+  local_18 = (pthread_t *)malloc(0x18);
+  if (local_18 == (pthread_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    local_18[1] = param_1;
+    local_18[2] = param_2;
+    iVar1 = pthread_create(&local_20,(pthread_attr_t *)0x0,internal_start,local_18);
+    if (iVar1 == 0) {
+      *local_18 = local_20;
+      *param_3 = local_18;
+      uVar2 = 1;
+    }
+    else {
+      free(local_18);
+      uVar2 = 0;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+
+
+
+
+void good2(void)
+
+{
+  return;
+}
+
+
+
+
+bool stdThreadJoin(pthread_t *param_1)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  void *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  iVar1 = pthread_join(*param_1,&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return iVar1 == 0;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::good() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::good(void)
+
+{
+  goodB2G1();
+  goodB2G2();
+  goodG2B1();
+  goodG2B2();
+  return;
+}
+
+
+
+
+void printWLine(long param_1)
+
+{
+  if (param_1 != 0) {
+    wprintf(L"%ls\n",param_1);
+  }
+  return;
+}
+
+
+
+
+void printHexCharLine(char param_1)
+
+{
+  printf("%02x\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void good3(void)
+
+{
+  return;
+}
+
+
+
+
+void good4(void)
+
+{
+  return;
+}
+
+
+
+
+void good9(void)
+
+{
+  return;
+}
+
+
+
+
+void printSizeTLine(undefined8 param_1)
+
+{
+  printf("%zu\n",param_1);
+  return;
+}
+
+
+
+
+void bad3(void)
+
+{
+  return;
+}
+
+
+
+
+void bad4(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 stdThreadDestroy(void *param_1)
+
+{
+  free(param_1);
+  return 1;
+}
+
+
+
+
+void printFloatLine(float param_1)
+
+{
+  printf("%f\n",(double)param_1);
+  return;
+}
+
+
+
+
+/* CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodB2G2() */
+
+void CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::goodB2G2(void)
+
+{
+  undefined4 uVar1;
+  undefined *puVar2;
+  long in_FS_OFFSET;
+  undefined auStack_28 [4];
+  int local_24;
+  int local_20;
+  int local_1c;
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (puVar2 = auStack_28; puVar2 != auStack_28; puVar2 = puVar2 + -0x1000) {
+    *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  }
+  *(undefined8 *)(puVar2 + -8) = *(undefined8 *)(puVar2 + -8);
+  local_18 = (ulong)(puVar2 + -0x51) & 0xfffffffffffffff0;
+  for (local_24 = 0; local_24 < 5; local_24 = local_24 + 1) {
+    *(int *)((long)local_24 * 8 + local_18) = local_24;
+    *(int *)((long)local_24 * 8 + local_18 + 4) = local_24;
+  }
+  for (local_20 = 0; local_20 < 10; local_20 = local_20 + 1) {
+    *(int *)((long)local_20 * 8 + local_18) = local_20;
+    *(int *)((long)local_20 * 8 + local_18 + 4) = local_20;
+  }
+  for (local_1c = 0; local_1c < 10; local_1c = local_1c + 1) {
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8);
+    *(undefined8 *)(puVar2 + -0x68) = 0x1017e0;
+    printIntLine(uVar1);
+    uVar1 = *(undefined4 *)(local_18 + (long)local_1c * 8 + 4);
+    *(undefined8 *)(puVar2 + -0x68) = 0x1017fe;
+    printIntLine(uVar1);
+  }
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(puVar2 + -0x68) = 0x10181a;
+  __stack_chk_fail();
+}
+
+
+
+
+undefined8 main(void)
+
+{
+  time_t tVar1;
+  
+  tVar1 = time((time_t *)0x0);
+  srand((uint)tVar1);
+  printLine("Calling good()...");
+  CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::good();
+  printLine("Finished good()");
+  printLine("Calling bad()...");
+  CWE457_Use_of_Uninitialized_Variable__twointsclass_array_alloca_partial_init_15::bad();
+  printLine("Finished bad()");
+  return 0;
+}
+
+
+
+
+void bad5(void)
+
+{
+  return;
+}
+
+
+
+
+void stdThreadLockAcquire(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_lock(param_1);
+  return;
+}
+
+
+
+
+void stdThreadLockDestroy(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_destroy(param_1);
+  free(param_1);
+  return;
+}
+
+
+
+
+void bad6(void)
+
+{
+  return;
+}
+
+
+
+
+void printUnsignedLine(uint param_1)
+
+{
+  printf("%u\n",(ulong)param_1);
+  return;
+}
+
+
+
