@@ -1,0 +1,808 @@
+
+void good4(void)
+
+{
+  return;
+}
+
+
+
+
+void bad7(void)
+
+{
+  return;
+}
+
+
+
+
+void stdThreadLockAcquire(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_lock(param_1);
+  return;
+}
+
+
+
+
+undefined8 stdThreadCreate(pthread_t param_1,pthread_t param_2,undefined8 *param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  pthread_t local_20;
+  pthread_t *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  *param_3 = 0;
+  local_18 = (pthread_t *)malloc(0x18);
+  if (local_18 == (pthread_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    local_18[1] = param_1;
+    local_18[2] = param_2;
+    iVar1 = pthread_create(&local_20,(pthread_attr_t *)0x0,internal_start,local_18);
+    if (iVar1 == 0) {
+      *local_18 = local_20;
+      *param_3 = local_18;
+      uVar2 = 1;
+    }
+    else {
+      free(local_18);
+      uVar2 = 0;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+
+
+
+
+void bad1(void)
+
+{
+  return;
+}
+
+
+
+
+void bad3(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 stdThreadDestroy(void *param_1)
+
+{
+  free(param_1);
+  return 1;
+}
+
+
+
+
+void bad9(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 globalReturnsTrue(void)
+
+{
+  return 1;
+}
+
+
+
+
+void printLine(char *param_1)
+
+{
+  if (param_1 != (char *)0x0) {
+    puts(param_1);
+  }
+  return;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad()
+    */
+
+void __thiscall
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::
+~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad
+          (CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad *this)
+
+{
+  size_t sVar1;
+  long in_FS_OFFSET;
+  ulong local_58;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  undefined8 local_28;
+  undefined8 local_20;
+  ushort local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_48 = 0;
+  local_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  local_28 = 0;
+  local_20 = 0;
+  local_18 = 0;
+  sVar1 = strlen(*(char **)this);
+  for (local_58 = 0; local_58 < sVar1; local_58 = local_58 + 1) {
+    *(undefined *)((long)&local_48 + local_58) = *(undefined *)(local_58 + *(long *)this);
+  }
+  local_18 = local_18 & 0xff;
+  printLine(*(undefined8 *)this);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void printSizeTLine(undefined8 param_1)
+
+{
+  printf("%zu\n",param_1);
+  return;
+}
+
+
+
+
+void good2(void)
+
+{
+  return;
+}
+
+
+
+
+void bad8(void)
+
+{
+  return;
+}
+
+
+
+
+void bad2(void)
+
+{
+  return;
+}
+
+
+
+
+void printBytesLine(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  puts("");
+  return;
+}
+
+
+
+
+void printLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void internal_start(long param_1)
+
+{
+  (**(code **)(param_1 + 8))(*(undefined8 *)(param_1 + 0x10));
+                    /* WARNING: Subroutine does not return */
+  pthread_exit((void *)0x0);
+}
+
+
+
+
+void printIntLine(uint param_1)
+
+{
+  printf("%d\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+undefined8 globalReturnsFalse(void)
+
+{
+  return 0;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B()
+    */
+
+void __thiscall
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::
+~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B
+          (CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B *this)
+
+{
+  size_t sVar1;
+  long in_FS_OFFSET;
+  ulong local_58;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  undefined8 local_28;
+  undefined8 local_20;
+  ushort local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_48 = 0;
+  local_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  local_28 = 0;
+  local_20 = 0;
+  local_18 = 0;
+  sVar1 = strlen(*(char **)this);
+  for (local_58 = 0; local_58 < sVar1; local_58 = local_58 + 1) {
+    *(undefined *)((long)&local_48 + local_58) = *(undefined *)(local_58 + *(long *)this);
+  }
+  local_18 = local_18 & 0xff;
+  printLine(*(undefined8 *)this);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void printFloatLine(float param_1)
+
+{
+  printf("%f\n",(double)param_1);
+  return;
+}
+
+
+
+
+void good6(void)
+
+{
+  return;
+}
+
+
+
+
+void good8(void)
+
+{
+  return;
+}
+
+
+
+
+ulong decodeHexChars(long param_1,ulong param_2,long param_3)
+
+{
+  ushort **ppuVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2)] & 0x1000) == 0) break;
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2 + 1)] & 0x1000) == 0) break;
+    __isoc99_sscanf(local_18 * 2 + param_3,&DAT_00103090,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void printStructLine(uint *param_1)
+
+{
+  printf("%d -- %d\n",(ulong)*param_1,(ulong)param_1[1]);
+  return;
+}
+
+
+
+
+void printUnsignedLine(uint param_1)
+
+{
+  printf("%u\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void printWcharLine(undefined4 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  local_18 = param_1;
+  printf("%ls\n",&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void stdThreadLockRelease(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_unlock(param_1);
+  return;
+}
+
+
+
+
+void good9(void)
+
+{
+  return;
+}
+
+
+
+
+int globalReturnsTrueOrFalse(void)
+
+{
+  int iVar1;
+  
+  iVar1 = rand();
+  return iVar1 % 2;
+}
+
+
+
+
+void good7(void)
+
+{
+  return;
+}
+
+
+
+
+void printDoubleLine(undefined8 param_1)
+
+{
+  printf("%g\n",param_1);
+  return;
+}
+
+
+
+
+undefined8 main(void)
+
+{
+  time_t tVar1;
+  
+  tVar1 = time((time_t *)0x0);
+  srand((uint)tVar1);
+  printLine("Calling good()...");
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::good();
+  printLine("Finished good()");
+  printLine("Calling bad()...");
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::bad();
+  printLine("Finished bad()");
+  return 0;
+}
+
+
+
+
+void printHexUnsignedCharLine(byte param_1)
+
+{
+  printf("%02x\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)PTR_00104f20)();
+  return;
+}
+
+
+
+
+undefined8 stdThreadLockCreate(undefined8 *param_1)
+
+{
+  int iVar1;
+  pthread_mutex_t *__mutex;
+  undefined8 uVar2;
+  
+  *param_1 = 0;
+  __mutex = (pthread_mutex_t *)malloc(0x28);
+  if (__mutex == (pthread_mutex_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    iVar1 = pthread_mutex_init(__mutex,(pthread_mutexattr_t *)0x0);
+    if (iVar1 == 0) {
+      *param_1 = __mutex;
+      uVar2 = 1;
+    }
+    else {
+      free(param_1);
+      uVar2 = 0;
+    }
+  }
+  return uVar2;
+}
+
+
+
+
+void bad4(void)
+
+{
+  return;
+}
+
+
+
+
+void good3(void)
+
+{
+  return;
+}
+
+
+
+
+void printShortLine(short param_1)
+
+{
+  printf("%hd\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void good5(void)
+
+{
+  return;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::bad() */
+
+void CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::bad(void)
+
+{
+  char *pcVar1;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad *pCVar2;
+  long in_FS_OFFSET;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad local_28 [8];
+  char *local_20;
+  char *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (pCVar2 = local_28; pCVar2 != local_28; pCVar2 = pCVar2 + -0x1000) {
+    *(undefined8 *)(pCVar2 + -8) = *(undefined8 *)(pCVar2 + -8);
+  }
+  *(undefined8 *)(pCVar2 + -8) = *(undefined8 *)(pCVar2 + -8);
+  pcVar1 = (char *)((ulong)(pCVar2 + -0x61) & 0xfffffffffffffff0);
+  local_20 = pcVar1;
+  local_18 = pcVar1;
+  *(undefined8 *)(pCVar2 + -0x78) = 0x1015b8;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad(local_28,pcVar1);
+  *(undefined8 *)(pCVar2 + -0x78) = 0x1015c4;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::
+  ~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad(local_28);
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(pCVar2 + -0x78) = 0x1015d9;
+  __stack_chk_fail();
+}
+
+
+
+
+void printLongLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void stdThreadLockDestroy(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_destroy(param_1);
+  free(param_1);
+  return;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad(char*)
+    */
+
+void __thiscall
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad
+          (CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_bad *this,char *param_1)
+
+{
+  *(char **)this = param_1;
+  memset(*(void **)this,0x41,99);
+  *(undefined *)(*(long *)this + 99) = 0;
+  return;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::good() */
+
+void CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::good(void)
+
+{
+  goodG2B();
+  return;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B(char*)
+    */
+
+void __thiscall
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::
+CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B
+          (CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B *this,
+          char *param_1)
+
+{
+  *(char **)this = param_1;
+  memset(*(void **)this,0x41,0x31);
+  *(undefined *)(*(long *)this + 0x31) = 0;
+  return;
+}
+
+
+
+
+ulong decodeHexWChars(long param_1,ulong param_2,long param_3)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8));
+    if (iVar1 == 0) break;
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8 + 4));
+    if (iVar1 == 0) break;
+    __isoc99_swscanf(local_18 * 8 + param_3,&DAT_00103098,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void good1(void)
+
+{
+  return;
+}
+
+
+
+
+void bad6(void)
+
+{
+  return;
+}
+
+
+
+
+void printWLine(long param_1)
+
+{
+  if (param_1 != 0) {
+    wprintf(L"%ls\n",param_1);
+  }
+  return;
+}
+
+
+
+
+void printHexCharLine(char param_1)
+
+{
+  printf("%02x\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+bool stdThreadJoin(pthread_t *param_1)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  void *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  iVar1 = pthread_join(*param_1,&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return iVar1 == 0;
+}
+
+
+
+
+/* CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::goodG2B() */
+
+void CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83::goodG2B(void)
+
+{
+  char *pcVar1;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B *pCVar2;
+  long in_FS_OFFSET;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B local_28 [8];
+  char *local_20;
+  char *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (pCVar2 = local_28; pCVar2 != local_28; pCVar2 = pCVar2 + -0x1000) {
+    *(undefined8 *)(pCVar2 + -8) = *(undefined8 *)(pCVar2 + -8);
+  }
+  *(undefined8 *)(pCVar2 + -8) = *(undefined8 *)(pCVar2 + -8);
+  pcVar1 = (char *)((ulong)(pCVar2 + -0x61) & 0xfffffffffffffff0);
+  local_20 = pcVar1;
+  local_18 = pcVar1;
+  *(undefined8 *)(pCVar2 + -0x78) = 0x101696;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B(local_28,pcVar1);
+  *(undefined8 *)(pCVar2 + -0x78) = 0x1016a2;
+  CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B::
+  ~CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_loop_83_goodG2B(local_28);
+  if (local_10 == *(long *)(in_FS_OFFSET + 0x28)) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  *(undefined8 *)(pCVar2 + -0x78) = 0x1016b7;
+  __stack_chk_fail();
+}
+
+
+
+
+void bad5(void)
+
+{
+  return;
+}
+
+
+
