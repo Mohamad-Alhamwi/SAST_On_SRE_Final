@@ -1,0 +1,841 @@
+
+void FUN_00101fc7(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_destroy(param_1);
+  free(param_1);
+  return;
+}
+
+
+
+
+void FUN_00101743(void)
+
+{
+  FUN_001016f5();
+  FUN_0010171c();
+  return;
+}
+
+
+
+
+void FUN_001017e3(long param_1)
+
+{
+  if (param_1 != 0) {
+    wprintf(L"%ls\n",param_1);
+  }
+  return;
+}
+
+
+
+
+undefined8 FUN_00101c90(void)
+
+{
+  return 1;
+}
+
+
+
+
+void FUN_00101d2b(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d41(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101914(char param_1)
+
+{
+  printf("%02x\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void FUN_00101d57(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101a1a(uint *param_1)
+
+{
+  printf("%d -- %d\n",(ulong)*param_1,(ulong)param_1[1]);
+  return;
+}
+
+
+
+
+void FUN_00101d0a(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101561(int param_1)
+
+{
+  void *pvVar1;
+  int local_14;
+  
+  pvVar1 = operator_new__(0x28);
+  for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+    *(undefined4 *)((long)pvVar1 + (long)local_14 * 4) = 0;
+  }
+  if ((param_1 < 0) || (9 < param_1)) {
+    FUN_001017bd("ERROR: Array index is out-of-bounds");
+  }
+  else {
+    *(undefined4 *)((long)pvVar1 + (long)param_1 * 4) = 1;
+    for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+      FUN_00101815(*(undefined4 *)((long)pvVar1 + (long)local_14 * 4));
+    }
+  }
+  if (pvVar1 != (void *)0x0) {
+    operator_delete__(pvVar1);
+  }
+  return;
+}
+
+
+
+
+void FUN_00101893(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void _FINI_0(void)
+
+{
+  if (DAT_00105018 == '\0') {
+    if (PTR___cxa_finalize_00104fd8 != (undefined *)0x0) {
+      __cxa_finalize(PTR_LOOP_00105008);
+    }
+    FUN_00101330();
+    DAT_00105018 = 1;
+    return;
+  }
+  return;
+}
+
+
+
+
+void FUN_00101642(undefined4 param_1)
+
+{
+  FUN_001014a5(param_1);
+  return;
+}
+
+
+
+
+void FUN_001019ec(undefined8 param_1)
+
+{
+  printf("%g\n",param_1);
+  return;
+}
+
+
+
+
+void FUN_00101d6d(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102000(undefined4 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  long lVar1;
+  
+  _DT_INIT();
+  lVar1 = 0;
+  do {
+    (*(code *)(&__DT_INIT_ARRAY)[lVar1])(param_1,param_2,param_3);
+    lVar1 = lVar1 + 1;
+  } while (lVar1 != 1);
+  return;
+}
+
+
+
+
+void FUN_00101815(uint param_1)
+
+{
+  printf("%d\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+/* WARNING: Removing unreachable block (ram,0x00101343) */
+/* WARNING: Removing unreachable block (ram,0x0010134f) */
+
+void FUN_00101330(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101869(float param_1)
+
+{
+  printf("%f\n",(double)param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00101c9f(void)
+
+{
+  return 0;
+}
+
+
+
+
+void FUN_00101cde(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101a4d(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  puts("");
+  return;
+}
+
+
+
+
+void FUN_00101999(uint param_1)
+
+{
+  printf("%u\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+ulong FUN_00101bb1(long param_1,ulong param_2,long param_3)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8));
+    if (iVar1 == 0) break;
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8 + 4));
+    if (iVar1 == 0) break;
+    __isoc99_swscanf(local_18 * 8 + param_3,&DAT_001030e0,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_0010165e(undefined4 param_1)
+
+{
+  FUN_00101561(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00101dc5(pthread_t param_1,pthread_t param_2,undefined8 *param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  pthread_t local_20;
+  pthread_t *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  *param_3 = 0;
+  local_18 = (pthread_t *)malloc(0x18);
+  if (local_18 == (pthread_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    local_18[1] = param_1;
+    local_18[2] = param_2;
+    iVar1 = pthread_create(&local_20,(pthread_attr_t *)0x0,FUN_00101d8e,local_18);
+    if (iVar1 == 0) {
+      *local_18 = local_20;
+      *param_3 = local_18;
+      uVar2 = 1;
+    }
+    else {
+      free(local_18);
+      uVar2 = 0;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+
+
+
+
+void FUN_00101cf4(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d78(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d62(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_0010183d(short param_1)
+
+{
+  printf("%hd\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void FUN_00101696(undefined4 param_1)
+
+{
+  FUN_00101642(param_1);
+  return;
+}
+
+
+
+
+void FUN_00101d4c(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001016f5(void)
+
+{
+  FUN_00101696(7);
+  return;
+}
+
+
+
+
+void FUN_001018be(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void FUN_001016b2(undefined4 param_1)
+
+{
+  FUN_0010165e(param_1);
+  return;
+}
+
+
+
+
+/* WARNING: Removing unreachable block (ram,0x00101384) */
+/* WARNING: Removing unreachable block (ram,0x00101390) */
+
+void FUN_00101360(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d15(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d8e(long param_1)
+
+{
+  (**(code **)(param_1 + 8))(*(undefined8 *)(param_1 + 0x10));
+                    /* WARNING: Subroutine does not return */
+  pthread_exit((void *)0x0);
+}
+
+
+
+
+void FUN_001013e9(int param_1)
+
+{
+  void *pvVar1;
+  int local_14;
+  
+  pvVar1 = operator_new__(0x28);
+  for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+    *(undefined4 *)((long)pvVar1 + (long)local_14 * 4) = 0;
+  }
+  if (param_1 < 0) {
+    FUN_001017bd("ERROR: Array index is negative.");
+  }
+  else {
+    *(undefined4 *)((long)pvVar1 + (long)param_1 * 4) = 1;
+    for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+      FUN_00101815(*(undefined4 *)((long)pvVar1 + (long)local_14 * 4));
+    }
+  }
+  if (pvVar1 != (void *)0x0) {
+    operator_delete__(pvVar1);
+  }
+  return;
+}
+
+
+
+
+void FUN_00101d36(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101f89(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_lock(param_1);
+  return;
+}
+
+
+
+
+void FUN_0010193f(undefined4 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  local_18 = param_1;
+  printf("%ls\n",&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_00101ce9(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101cd3(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d20(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001017bd(char *param_1)
+
+{
+  if (param_1 != (char *)0x0) {
+    puts(param_1);
+  }
+  return;
+}
+
+
+
+
+bool FUN_00101e92(pthread_t *param_1)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  void *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  iVar1 = pthread_join(*param_1,&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return iVar1 == 0;
+}
+
+
+
+
+void FUN_001016ce(void)
+
+{
+  FUN_0010167a(10);
+  return;
+}
+
+
+
+
+void FUN_0010167a(undefined4 param_1)
+
+{
+  FUN_00101626(param_1);
+  return;
+}
+
+
+
+
+void FUN_001014a5(int param_1)
+
+{
+  void *pvVar1;
+  int local_14;
+  
+  pvVar1 = operator_new__(0x28);
+  for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+    *(undefined4 *)((long)pvVar1 + (long)local_14 * 4) = 0;
+  }
+  if (param_1 < 0) {
+    FUN_001017bd("ERROR: Array index is negative.");
+  }
+  else {
+    *(undefined4 *)((long)pvVar1 + (long)param_1 * 4) = 1;
+    for (local_14 = 0; local_14 < 10; local_14 = local_14 + 1) {
+      FUN_00101815(*(undefined4 *)((long)pvVar1 + (long)local_14 * 4));
+    }
+  }
+  if (pvVar1 != (void *)0x0) {
+    operator_delete__(pvVar1);
+  }
+  return;
+}
+
+
+
+
+void FUN_0010171c(void)
+
+{
+  FUN_001016b2(10);
+  return;
+}
+
+
+
+
+undefined8 FUN_00101eed(void *param_1)
+
+{
+  free(param_1);
+  return 1;
+}
+
+
+
+
+void FUN_00101fa8(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_unlock(param_1);
+  return;
+}
+
+
+
+
+ulong FUN_00101aad(long param_1,ulong param_2,long param_3)
+
+{
+  ushort **ppuVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2)] & 0x1000) == 0) break;
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2 + 1)] & 0x1000) == 0) break;
+    __isoc99_sscanf(local_18 * 2 + param_3,&DAT_001030d8,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_00101cc8(void)
+
+{
+  return;
+}
+
+
+
+
+int FUN_00101cae(void)
+
+{
+  int iVar1;
+  
+  iVar1 = rand();
+  return iVar1 % 2;
+}
+
+
+
+
+void FUN_00102070(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101cff(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d83(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001019c1(byte param_1)
+
+{
+  printf("%02x\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void FUN_001018e9(undefined8 param_1)
+
+{
+  printf("%zu\n",param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00101f10(undefined8 *param_1)
+
+{
+  int iVar1;
+  pthread_mutex_t *__mutex;
+  undefined8 uVar2;
+  
+  *param_1 = 0;
+  __mutex = (pthread_mutex_t *)malloc(0x28);
+  if (__mutex == (pthread_mutex_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    iVar1 = pthread_mutex_init(__mutex,(pthread_mutexattr_t *)0x0);
+    if (iVar1 == 0) {
+      *param_1 = __mutex;
+      uVar2 = 1;
+    }
+    else {
+      free(param_1);
+      uVar2 = 0;
+    }
+  }
+  return uVar2;
+}
+
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)PTR_00104f20)();
+  return;
+}
+
+
+
+
+void FUN_00101626(undefined4 param_1)
+
+{
+  FUN_001013e9(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00101758(void)
+
+{
+  time_t tVar1;
+  
+  tVar1 = time((time_t *)0x0);
+  srand((uint)tVar1);
+  FUN_001017bd("Calling good()...");
+  FUN_00101743();
+  FUN_001017bd("Finished good()");
+  FUN_001017bd("Calling bad()...");
+  FUN_001016ce();
+  FUN_001017bd("Finished bad()");
+  return 0;
+}
+
+
+
