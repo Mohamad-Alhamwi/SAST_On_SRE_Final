@@ -1,0 +1,1814 @@
+
+void bad9(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_get_Node_allocator() */
+
+_List_base<short,std::allocator<short>> * __thiscall
+std::_List_base<short,std::allocator<short>>::_M_get_Node_allocator
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  return this;
+}
+
+
+
+
+ulong decodeHexChars(long param_1,ulong param_2,long param_3)
+
+{
+  ushort **ppuVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2)] & 0x1000) == 0) break;
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2 + 1)] & 0x1000) == 0) break;
+    __isoc99_sscanf(local_18 * 2 + param_3,&DAT_001030d0,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::back() */
+
+void __thiscall
+std::list<short,std::allocator<short>>::back(list<short,std::allocator<short>> *this)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_18 = end(this);
+  _List_iterator<short>::operator--((_List_iterator<short> *)&local_18);
+  _List_iterator<short>::operator*((_List_iterator<short> *)&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void good6(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_List_impl::_List_impl() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_List_impl::_List_impl(_List_impl *this)
+
+{
+  allocator<std::_List_node<short>>::allocator();
+  __detail::_List_node_header::_List_node_header((_List_node_header *)this);
+  return;
+}
+
+
+
+
+void good9(void)
+
+{
+  return;
+}
+
+
+
+
+void good2(void)
+
+{
+  return;
+}
+
+
+
+
+void good8(void)
+
+{
+  return;
+}
+
+
+
+
+void bad5(void)
+
+{
+  return;
+}
+
+
+
+
+/* void new_allocator<std::_List_node<short> >::construct<short, short const&>(short*, short const&)
+    */
+
+void __thiscall
+new_allocator<std::_List_node<short>>::construct<short,short_const&>
+          (new_allocator<std::_List_node<short>> *this,short *param_1,short *param_2)
+
+{
+  short sVar1;
+  short *psVar2;
+  
+  psVar2 = std::forward<short_const&>((type *)param_2);
+  sVar1 = *psVar2;
+  psVar2 = (short *)operator_new(2,param_1);
+  *psVar2 = sVar1;
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_get_node() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_M_get_node
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  allocator_traits<std::allocator<std::_List_node<short>>>::allocate((allocator *)this,1);
+  return;
+}
+
+
+
+
+void internal_start(long param_1)
+
+{
+  (**(code **)(param_1 + 8))(*(undefined8 *)(param_1 + 0x10));
+                    /* WARNING: Subroutine does not return */
+  pthread_exit((void *)0x0);
+}
+
+
+
+
+int globalReturnsTrueOrFalse(void)
+
+{
+  int iVar1;
+  
+  iVar1 = rand();
+  return iVar1 % 2;
+}
+
+
+
+
+void good7(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::_List_node<short>::_M_valptr() */
+
+void __thiscall std::_List_node<short>::_M_valptr(_List_node<short> *this)
+
+{
+  __aligned_membuf<short>::_M_ptr((__aligned_membuf<short> *)(this + 0x10));
+  return;
+}
+
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)PTR_00105f08)();
+  return;
+}
+
+
+
+
+void printLongLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+/* operator new(unsigned long, void*) */
+
+void * operator_new(ulong param_1,void *param_2)
+
+{
+  return param_2;
+}
+
+
+
+
+/* __aligned_membuf<short>::_M_ptr() const */
+
+void __thiscall __aligned_membuf<short>::_M_ptr(__aligned_membuf<short> *this)
+
+{
+  _M_addr(this);
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_clear() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_M_clear
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  _List_node<short> *p_Var1;
+  short *psVar2;
+  allocator *paVar3;
+  undefined8 local_20;
+  
+  local_20 = *(_List_node<short> **)this;
+  while (local_20 != (_List_node<short> *)this) {
+    p_Var1 = *(_List_node<short> **)local_20;
+    psVar2 = (short *)_List_node<short>::_M_valptr(local_20);
+    paVar3 = (allocator *)_M_get_Node_allocator(this);
+    allocator_traits<std::allocator<std::_List_node<short>>>::destroy<short>(paVar3,psVar2);
+    _M_put_node(this,(_List_node *)local_20);
+    local_20 = p_Var1;
+  }
+  return;
+}
+
+
+
+
+void printHexUnsignedCharLine(byte param_1)
+
+{
+  printf("%02x\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_put_node(std::_List_node<short>*) */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_M_put_node
+          (_List_base<short,std::allocator<short>> *this,_List_node *param_1)
+
+{
+  allocator_traits<std::allocator<std::_List_node<short>>>::deallocate((allocator *)this,param_1,1);
+  return;
+}
+
+
+
+
+undefined8 stdThreadCreate(pthread_t param_1,pthread_t param_2,undefined8 *param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  pthread_t local_20;
+  pthread_t *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  *param_3 = 0;
+  local_18 = (pthread_t *)malloc(0x18);
+  if (local_18 == (pthread_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    local_18[1] = param_1;
+    local_18[2] = param_2;
+    iVar1 = pthread_create(&local_20,(pthread_attr_t *)0x0,internal_start,local_18);
+    if (iVar1 == 0) {
+      *local_18 = local_20;
+      *param_3 = local_18;
+      uVar2 = 1;
+    }
+    else {
+      free(local_18);
+      uVar2 = 0;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::goodG2B() */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::goodG2B(void)
+
+{
+  long in_FS_OFFSET;
+  short local_5a;
+  list<short,std::allocator<short>> local_58 [32];
+  list<short,std::allocator<short>> local_38 [24];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  std::list<short,std::allocator<short>>::list(local_58);
+  local_5a = -2;
+                    /* try { // try from 001017f7 to 00101834 has its CatchHandler @ 00101880 */
+  std::list<short,std::allocator<short>>::push_back(local_58,&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,&local_5a);
+  std::list<short,std::allocator<short>>::list(local_38,(list *)local_58);
+                    /* try { // try from 0010183c to 00101840 has its CatchHandler @ 0010186b */
+  goodG2BSink((list)local_38);
+  std::list<short,std::allocator<short>>::~list(local_38);
+  std::list<short,std::allocator<short>>::~list(local_58);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void printWcharLine(undefined4 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  local_18 = param_1;
+  printf("%ls\n",&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::end() */
+
+undefined8 __thiscall
+std::list<short,std::allocator<short>>::end(list<short,std::allocator<short>> *this)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  _List_iterator<short>::_List_iterator((_List_iterator<short> *)&local_18,(_List_node_base *)this);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+undefined8 stdThreadLockCreate(undefined8 *param_1)
+
+{
+  int iVar1;
+  pthread_mutex_t *__mutex;
+  undefined8 uVar2;
+  
+  *param_1 = 0;
+  __mutex = (pthread_mutex_t *)malloc(0x28);
+  if (__mutex == (pthread_mutex_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    iVar1 = pthread_mutex_init(__mutex,(pthread_mutexattr_t *)0x0);
+    if (iVar1 == 0) {
+      *param_1 = __mutex;
+      uVar2 = 1;
+    }
+    else {
+      free(param_1);
+      uVar2 = 0;
+    }
+  }
+  return uVar2;
+}
+
+
+
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+/* short const& std::forward<short const&>(std::remove_reference<short const&>::type&) */
+
+short * std::forward<short_const&>(type *param_1)
+
+{
+  return (short *)param_1;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::push_back(short const&) */
+
+void __thiscall
+std::list<short,std::allocator<short>>::push_back
+          (list<short,std::allocator<short>> *this,short *param_1)
+
+{
+  _List_iterator _Var1;
+  
+  _Var1 = end(this);
+  _M_insert<short_const&>(this,_Var1,param_1);
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_List_base() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_List_base
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  _List_impl::_List_impl((_List_impl *)this);
+  return;
+}
+
+
+
+
+undefined8 stdThreadDestroy(void *param_1)
+
+{
+  free(param_1);
+  return 1;
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::new_allocator(new_allocator<std::_List_node<short> >
+   const&) */
+
+void new_allocator<std::_List_node<short>>::new_allocator(new_allocator *param_1)
+
+{
+  return;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::~list() */
+
+void __thiscall
+std::list<short,std::allocator<short>>::~list(list<short,std::allocator<short>> *this)
+
+{
+  _List_base<short,std::allocator<short>>::~_List_base
+            ((_List_base<short,std::allocator<short>> *)this);
+  return;
+}
+
+
+
+
+/* std::allocator_traits<std::allocator<std::_List_node<short> >
+   >::deallocate(std::allocator<std::_List_node<short> >&, std::_List_node<short>*, unsigned long)
+    */
+
+void std::allocator_traits<std::allocator<std::_List_node<short>>>::deallocate
+               (allocator *param_1,_List_node *param_2,ulong param_3)
+
+{
+  new_allocator<std::_List_node<short>>::deallocate((_List_node *)param_1,(ulong)param_2);
+  return;
+}
+
+
+
+
+void bad8(void)
+
+{
+  return;
+}
+
+
+
+
+void good3(void)
+
+{
+  return;
+}
+
+
+
+
+bool stdThreadJoin(pthread_t *param_1)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  void *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  iVar1 = pthread_join(*param_1,&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return iVar1 == 0;
+}
+
+
+
+
+/* std::_List_const_iterator<short>::_List_const_iterator(std::__detail::_List_node_base const*) */
+
+void __thiscall
+std::_List_const_iterator<short>::_List_const_iterator
+          (_List_const_iterator<short> *this,_List_node_base *param_1)
+
+{
+  *(_List_node_base **)this = param_1;
+  return;
+}
+
+
+
+
+/* void std::list<short, std::allocator<short>
+   >::_M_initialize_dispatch<std::_List_const_iterator<short> >(std::_List_const_iterator<short>,
+   std::_List_const_iterator<short>, std::__false_type) */
+
+void std::list<short,std::allocator<short>>::
+     _M_initialize_dispatch<std::_List_const_iterator<short>>
+               (_List_const_iterator param_1,_List_const_iterator param_2,__false_type param_3)
+
+{
+  char cVar1;
+  short *psVar2;
+  undefined4 in_register_00000014;
+  undefined4 in_register_00000034;
+  undefined4 in_register_0000003c;
+  undefined8 local_20;
+  undefined8 local_18;
+  list<short,std::allocator<short>> *local_10;
+  
+  local_10 = (list<short,std::allocator<short>> *)CONCAT44(in_register_0000003c,param_1);
+  local_18 = CONCAT44(in_register_00000034,param_2);
+  local_20 = CONCAT44(in_register_00000014,param_3);
+  while( true ) {
+    cVar1 = operator!=((_List_const_iterator *)&local_18,(_List_const_iterator *)&local_20);
+    if (cVar1 == '\0') break;
+    psVar2 = (short *)_List_const_iterator<short>::operator*
+                                ((_List_const_iterator<short> *)&local_18);
+    emplace_back<short_const&>(local_10,psVar2);
+    _List_const_iterator<short>::operator++((_List_const_iterator<short> *)&local_18);
+  }
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::goodB2GSink(std::list<short,
+   std::allocator<short> >) */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::goodB2GSink(list param_1)
+
+{
+  short sVar1;
+  short *psVar2;
+  undefined4 in_register_0000003c;
+  
+  psVar2 = (short *)std::list<short,std::allocator<short>>::back
+                              ((list<short,std::allocator<short>> *)
+                               CONCAT44(in_register_0000003c,param_1));
+  sVar1 = *psVar2;
+  if (sVar1 < 0) {
+    if (sVar1 < -0x3fff) {
+      printLine("data value is too small to perform multiplication.");
+    }
+    else {
+      printIntLine((int)(short)(sVar1 * 2));
+    }
+  }
+  return;
+}
+
+
+
+
+/* std::_List_iterator<short>::TEMPNAMEPLACEHOLDERVALUE() */
+
+_List_iterator<short> * __thiscall
+std::_List_iterator<short>::operator--(_List_iterator<short> *this)
+
+{
+  *(undefined8 *)this = *(undefined8 *)(*(long *)this + 8);
+  return this;
+}
+
+
+
+
+void printUnsignedLine(uint param_1)
+
+{
+  printf("%u\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+/* std::remove_reference<std::allocator<std::_List_node<short> >&>::type&&
+   std::move<std::allocator<std::_List_node<short> >&>(std::allocator<std::_List_node<short> >&) */
+
+type * std::move<std::allocator<std::_List_node<short>>&>(allocator *param_1)
+
+{
+  return (type *)param_1;
+}
+
+
+
+
+void printDoubleLine(undefined8 param_1)
+
+{
+  printf("%g\n",param_1);
+  return;
+}
+
+
+
+
+void bad4(void)
+
+{
+  return;
+}
+
+
+
+
+void printHexCharLine(char param_1)
+
+{
+  printf("%02x\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+/* std::_List_node<short>::_M_valptr() const */
+
+void __thiscall std::_List_node<short>::_M_valptr(_List_node<short> *this)
+
+{
+  __aligned_membuf<short>::_M_ptr((__aligned_membuf<short> *)(this + 0x10));
+  return;
+}
+
+
+
+
+/* __alloc_traits<std::allocator<std::_List_node<short> >, std::_List_node<short>
+   >::_S_select_on_copy(std::allocator<std::_List_node<short> > const&) */
+
+allocator *
+__alloc_traits<std::allocator<std::_List_node<short>>,std::_List_node<short>>::_S_select_on_copy
+          (allocator *param_1)
+
+{
+  long lVar1;
+  long in_FS_OFFSET;
+  
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  std::allocator_traits<std::allocator<std::_List_node<short>>>::
+  select_on_container_copy_construction(param_1);
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return param_1;
+}
+
+
+
+
+void printLine(char *param_1)
+
+{
+  if (param_1 != (char *)0x0) {
+    puts(param_1);
+  }
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_List_base(std::allocator<std::_List_node<short>
+   >&&) */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_List_base
+          (_List_base<short,std::allocator<short>> *this,allocator *param_1)
+
+{
+  type *ptVar1;
+  
+  ptVar1 = move<std::allocator<std::_List_node<short>>&>(param_1);
+  _List_impl::_List_impl((_List_impl *)this,(allocator *)ptVar1);
+  return;
+}
+
+
+
+
+/* std::_List_node<short>* std::list<short, std::allocator<short> >::_M_create_node<short
+   const&>(short const&) */
+
+_List_node * __thiscall
+std::list<short,std::allocator<short>>::_M_create_node<short_const&>
+          (list<short,std::allocator<short>> *this,short *param_1)
+
+{
+  _List_node<short> *this_00;
+  allocator *paVar1;
+  short *psVar2;
+  short *psVar3;
+  long in_FS_OFFSET;
+  __allocated_ptr<std::allocator<std::_List_node<short>>> local_38 [24];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  this_00 = (_List_node<short> *)
+            _List_base<short,std::allocator<short>>::_M_get_node
+                      ((_List_base<short,std::allocator<short>> *)this);
+  paVar1 = (allocator *)
+           _List_base<short,std::allocator<short>>::_M_get_Node_allocator
+                     ((_List_base<short,std::allocator<short>> *)this);
+  __allocated_ptr<std::allocator<std::_List_node<short>>>::__allocated_ptr
+            (local_38,paVar1,(_List_node *)this_00);
+  psVar2 = forward<short_const&>((type *)param_1);
+  psVar3 = (short *)_List_node<short>::_M_valptr(this_00);
+  allocator_traits<std::allocator<std::_List_node<short>>>::construct<short,short_const&>
+            (paVar1,psVar3,psVar2);
+  __allocated_ptr<std::allocator<std::_List_node<short>>>::operator=
+            (local_38,(_func_decltype_nullptr *)0x0);
+  __allocated_ptr<std::allocator<std::_List_node<short>>>::~__allocated_ptr(local_38);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return (_List_node *)this_00;
+}
+
+
+
+
+void bad7(void)
+
+{
+  return;
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::~new_allocator() */
+
+void __thiscall
+new_allocator<std::_List_node<short>>::~new_allocator(new_allocator<std::_List_node<short>> *this)
+
+{
+  return;
+}
+
+
+
+
+void good1(void)
+
+{
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::good() */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::good(void)
+
+{
+  goodG2B();
+  goodB2G();
+  return;
+}
+
+
+
+
+void bad2(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_get_Node_allocator() const */
+
+_List_base<short,std::allocator<short>> * __thiscall
+std::_List_base<short,std::allocator<short>>::_M_get_Node_allocator
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  return this;
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::max_size() const */
+
+undefined8 new_allocator<std::_List_node<short>>::max_size(void)
+
+{
+  return 0x555555555555555;
+}
+
+
+
+
+void bad3(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::__detail::_List_node_header::_M_init() */
+
+void __thiscall std::__detail::_List_node_header::_M_init(_List_node_header *this)
+
+{
+  *(_List_node_header **)(this + 8) = this;
+  *(undefined8 *)this = *(undefined8 *)(this + 8);
+  *(undefined8 *)(this + 0x10) = 0;
+  return;
+}
+
+
+
+
+/* std::allocator<std::_List_node<short> >::allocator(std::allocator<std::_List_node<short> >
+   const&) */
+
+void std::allocator<std::_List_node<short>>::allocator(allocator *param_1)
+
+{
+  new_allocator<std::_List_node<short>>::new_allocator((new_allocator *)param_1);
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_List_impl::~_List_impl() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_List_impl::~_List_impl(_List_impl *this)
+
+{
+  allocator<std::_List_node<short>>::~allocator((allocator<std::_List_node<short>> *)this);
+  return;
+}
+
+
+
+
+/* void std::list<short, std::allocator<short> >::emplace_back<short const&>(short const&) */
+
+void __thiscall
+std::list<short,std::allocator<short>>::emplace_back<short_const&>
+          (list<short,std::allocator<short>> *this,short *param_1)
+
+{
+  _List_iterator _Var1;
+  short *psVar2;
+  
+  psVar2 = forward<short_const&>((type *)param_1);
+  _Var1 = end(this);
+  _M_insert<short_const&>(this,_Var1,psVar2);
+  return;
+}
+
+
+
+
+/* std::_List_iterator<short>::TEMPNAMEPLACEHOLDERVALUE() const */
+
+void __thiscall std::_List_iterator<short>::operator*(_List_iterator<short> *this)
+
+{
+  _List_node<short>::_M_valptr(*(_List_node<short> **)this);
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::_M_inc_size(unsigned long) */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_M_inc_size
+          (_List_base<short,std::allocator<short>> *this,ulong param_1)
+
+{
+  *(ulong *)(this + 0x10) = *(long *)(this + 0x10) + param_1;
+  return;
+}
+
+
+
+
+/* void std::list<short, std::allocator<short> >::_M_insert<short
+   const&>(std::_List_iterator<short>, short const&) */
+
+void __thiscall
+std::list<short,std::allocator<short>>::_M_insert<short_const&>
+          (list<short,std::allocator<short>> *this,_List_iterator param_1,short *param_2)
+
+{
+  short *psVar1;
+  _List_node *p_Var2;
+  
+  psVar1 = forward<short_const&>((type *)param_2);
+  p_Var2 = _M_create_node<short_const&>(this,psVar1);
+  std::__detail::_List_node_base::_M_hook((_List_node_base *)p_Var2);
+  _List_base<short,std::allocator<short>>::_M_inc_size
+            ((_List_base<short,std::allocator<short>> *)this,1);
+  return;
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::deallocate(std::_List_node<short>*, unsigned long) */
+
+void new_allocator<std::_List_node<short>>::deallocate(_List_node *param_1,ulong param_2)
+
+{
+  operator_delete((void *)param_2);
+  return;
+}
+
+
+
+
+/* std::__allocated_ptr<std::allocator<std::_List_node<short> >
+   >::TEMPNAMEPLACEHOLDERVALUE(decltype(nullptr)) */
+
+__allocated_ptr<std::allocator<std::_List_node<short>>> * __thiscall
+std::__allocated_ptr<std::allocator<std::_List_node<short>>>::operator=
+          (__allocated_ptr<std::allocator<std::_List_node<short>>> *this,
+          _func_decltype_nullptr *param_1)
+
+{
+  *(undefined8 *)(this + 8) = 0;
+  return this;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::begin() const */
+
+undefined8 __thiscall
+std::list<short,std::allocator<short>>::begin(list<short,std::allocator<short>> *this)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  _List_const_iterator<short>::_List_const_iterator
+            ((_List_const_iterator<short> *)&local_18,*(_List_node_base **)this);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void good4(void)
+
+{
+  return;
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::new_allocator() */
+
+void new_allocator<std::_List_node<short>>::new_allocator(void)
+
+{
+  return;
+}
+
+
+
+
+void bad6(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::allocator_traits<std::allocator<std::_List_node<short> >
+   >::select_on_container_copy_construction(std::allocator<std::_List_node<short> > const&) */
+
+allocator *
+std::allocator_traits<std::allocator<std::_List_node<short>>>::select_on_container_copy_construction
+          (allocator *param_1)
+
+{
+  allocator<std::_List_node<short>>::allocator(param_1);
+  return param_1;
+}
+
+
+
+
+undefined8 globalReturnsTrue(void)
+
+{
+  return 1;
+}
+
+
+
+
+void printFloatLine(float param_1)
+
+{
+  printf("%f\n",(double)param_1);
+  return;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::list(std::list<short, std::allocator<short> > const&)
+    */
+
+void __thiscall
+std::list<short,std::allocator<short>>::list(list<short,std::allocator<short>> *this,list *param_1)
+
+{
+  __false_type _Var1;
+  _List_const_iterator _Var2;
+  long in_FS_OFFSET;
+  allocator local_21;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  _List_base<short,std::allocator<short>>::_M_get_Node_allocator
+            ((_List_base<short,std::allocator<short>> *)param_1);
+  __alloc_traits<std::allocator<std::_List_node<short>>,std::_List_node<short>>::_S_select_on_copy
+            (&local_21);
+  _List_base<short,std::allocator<short>>::_List_base
+            ((_List_base<short,std::allocator<short>> *)this,&local_21);
+  allocator<std::_List_node<short>>::~allocator((allocator<std::_List_node<short>> *)&local_21);
+  _Var1 = end((list<short,std::allocator<short>> *)param_1);
+  _Var2 = begin((list<short,std::allocator<short>> *)param_1);
+                    /* try { // try from 00101c7e to 00101c82 has its CatchHandler @ 00101c85 */
+  _M_initialize_dispatch<std::_List_const_iterator<short>>((_List_const_iterator)this,_Var2,_Var1);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void printSizeTLine(undefined8 param_1)
+
+{
+  printf("%zu\n",param_1);
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::bad() */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::bad(void)
+
+{
+  uint uVar1;
+  int iVar2;
+  int iVar3;
+  long in_FS_OFFSET;
+  ushort local_5a;
+  list<short,std::allocator<short>> local_58 [32];
+  list<short,std::allocator<short>> local_38 [24];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  std::list<short,std::allocator<short>>::list(local_58);
+  local_5a = 0;
+  uVar1 = rand();
+  if ((uVar1 & 1) == 0) {
+    rand();
+    iVar2 = rand();
+    iVar3 = rand();
+    local_5a = ~((ushort)iVar3 ^ (ushort)(iVar2 << 0xf));
+  }
+  else {
+    rand();
+    iVar2 = rand();
+    iVar3 = rand();
+    local_5a = (ushort)iVar3 ^ (ushort)(iVar2 << 0xf);
+  }
+                    /* try { // try from 00101702 to 0010173f has its CatchHandler @ 0010178b */
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::list(local_38,(list *)local_58);
+                    /* try { // try from 00101747 to 0010174b has its CatchHandler @ 00101776 */
+  badSink((list)local_38);
+  std::list<short,std::allocator<short>>::~list(local_38);
+  std::list<short,std::allocator<short>>::~list(local_58);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void printStructLine(uint *param_1)
+
+{
+  printf("%d -- %d\n",(ulong)*param_1,(ulong)param_1[1]);
+  return;
+}
+
+
+
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+/* std::TEMPNAMEPLACEHOLDERVALUE(std::_List_const_iterator<short> const&,
+   std::_List_const_iterator<short> const&) */
+
+undefined8 std::operator!=(_List_const_iterator *param_1,_List_const_iterator *param_2)
+
+{
+  return CONCAT71((int7)((ulong)*(long *)param_2 >> 8),*(long *)param_1 != *(long *)param_2);
+}
+
+
+
+
+/* new_allocator<std::_List_node<short> >::allocate(unsigned long, void const*) */
+
+void new_allocator<std::_List_node<short>>::allocate(ulong param_1,void *param_2)
+
+{
+  void *pvVar1;
+  
+  pvVar1 = (void *)max_size();
+  if (pvVar1 < param_2) {
+    std::__throw_bad_alloc();
+  }
+  operator_new((long)param_2 * 0x18);
+  return;
+}
+
+
+
+
+/* std::__detail::_List_node_header::_List_node_header() */
+
+void __thiscall std::__detail::_List_node_header::_List_node_header(_List_node_header *this)
+
+{
+  _M_init(this);
+  return;
+}
+
+
+
+
+void printBytesLine(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  puts("");
+  return;
+}
+
+
+
+
+/* void std::allocator_traits<std::allocator<std::_List_node<short> > >::construct<short, short
+   const&>(std::allocator<std::_List_node<short> >&, short*, short const&) */
+
+void std::allocator_traits<std::allocator<std::_List_node<short>>>::construct<short,short_const&>
+               (allocator *param_1,short *param_2,short *param_3)
+
+{
+  short *psVar1;
+  
+  psVar1 = forward<short_const&>((type *)param_3);
+  new_allocator<std::_List_node<short>>::construct<short,short_const&>
+            ((new_allocator<std::_List_node<short>> *)param_1,param_2,psVar1);
+  return;
+}
+
+
+
+
+void printIntLine(uint param_1)
+
+{
+  printf("%d\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::badSink(std::list<short, std::allocator<short>
+   >) */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::badSink(list param_1)
+
+{
+  short *psVar1;
+  undefined4 in_register_0000003c;
+  
+  psVar1 = (short *)std::list<short,std::allocator<short>>::back
+                              ((list<short,std::allocator<short>> *)
+                               CONCAT44(in_register_0000003c,param_1));
+  if (*psVar1 < 0) {
+    printIntLine((int)(short)(*psVar1 * 2));
+  }
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short> >::~_List_base() */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::~_List_base
+          (_List_base<short,std::allocator<short>> *this)
+
+{
+  _M_clear(this);
+  _List_impl::~_List_impl((_List_impl *)this);
+  return;
+}
+
+
+
+
+ulong decodeHexWChars(long param_1,ulong param_2,long param_3)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8));
+    if (iVar1 == 0) break;
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8 + 4));
+    if (iVar1 == 0) break;
+    __isoc99_swscanf(local_18 * 8 + param_3,&DAT_001030d8,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+/* std::allocator<std::_List_node<short> >::allocator() */
+
+void std::allocator<std::_List_node<short>>::allocator(void)
+
+{
+  new_allocator<std::_List_node<short>>::new_allocator();
+  return;
+}
+
+
+
+
+/* std::_List_iterator<short>::_List_iterator(std::__detail::_List_node_base*) */
+
+void __thiscall
+std::_List_iterator<short>::_List_iterator(_List_iterator<short> *this,_List_node_base *param_1)
+
+{
+  *(_List_node_base **)this = param_1;
+  return;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::list() */
+
+void __thiscall
+std::list<short,std::allocator<short>>::list(list<short,std::allocator<short>> *this)
+
+{
+  _List_base<short,std::allocator<short>>::_List_base
+            ((_List_base<short,std::allocator<short>> *)this);
+  return;
+}
+
+
+
+
+void bad1(void)
+
+{
+  return;
+}
+
+
+
+
+/* std::allocator_traits<std::allocator<std::_List_node<short> >
+   >::allocate(std::allocator<std::_List_node<short> >&, unsigned long) */
+
+void std::allocator_traits<std::allocator<std::_List_node<short>>>::allocate
+               (allocator *param_1,ulong param_2)
+
+{
+  new_allocator<std::_List_node<short>>::allocate((ulong)param_1,(void *)param_2);
+  return;
+}
+
+
+
+
+void stdThreadLockAcquire(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_lock(param_1);
+  return;
+}
+
+
+
+
+void printWLine(long param_1)
+
+{
+  if (param_1 != 0) {
+    wprintf(L"%ls\n",param_1);
+  }
+  return;
+}
+
+
+
+
+void printLongLine(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+undefined8 globalReturnsFalse(void)
+
+{
+  return 0;
+}
+
+
+
+
+undefined8 main(void)
+
+{
+  time_t tVar1;
+  
+  tVar1 = time((time_t *)0x0);
+  srand((uint)tVar1);
+  printLine("Calling good()...");
+  CWE191_Integer_Underflow__short_rand_multiply_73::good();
+  printLine("Finished good()");
+  printLine("Calling bad()...");
+  CWE191_Integer_Underflow__short_rand_multiply_73::bad();
+  printLine("Finished bad()");
+  return 0;
+}
+
+
+
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+/* std::allocator<std::_List_node<short> >* std::__addressof<std::allocator<std::_List_node<short> >
+   >(std::allocator<std::_List_node<short> >&) */
+
+allocator * std::__addressof<std::allocator<std::_List_node<short>>>(allocator *param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+/* void new_allocator<std::_List_node<short> >::destroy<short>(short*) */
+
+void new_allocator<std::_List_node<short>>::destroy<short>(short *param_1)
+
+{
+  return;
+}
+
+
+
+
+/* std::_List_base<short, std::allocator<short>
+   >::_List_impl::_List_impl(std::allocator<std::_List_node<short> >&&) */
+
+void __thiscall
+std::_List_base<short,std::allocator<short>>::_List_impl::_List_impl
+          (_List_impl *this,allocator *param_1)
+
+{
+  move<std::allocator<std::_List_node<short>>&>(param_1);
+  allocator<std::_List_node<short>>::allocator((allocator *)this);
+  __detail::_List_node_header::_List_node_header((_List_node_header *)this);
+  return;
+}
+
+
+
+
+void good5(void)
+
+{
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::goodB2G() */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::goodB2G(void)
+
+{
+  uint uVar1;
+  int iVar2;
+  int iVar3;
+  long in_FS_OFFSET;
+  ushort local_5a;
+  list<short,std::allocator<short>> local_58 [32];
+  list<short,std::allocator<short>> local_38 [24];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  std::list<short,std::allocator<short>>::list(local_58);
+  local_5a = 0;
+  uVar1 = rand();
+  if ((uVar1 & 1) == 0) {
+    rand();
+    iVar2 = rand();
+    iVar3 = rand();
+    local_5a = ~((ushort)iVar3 ^ (ushort)(iVar2 << 0xf));
+  }
+  else {
+    rand();
+    iVar2 = rand();
+    iVar3 = rand();
+    local_5a = (ushort)iVar3 ^ (ushort)(iVar2 << 0xf);
+  }
+                    /* try { // try from 00101926 to 00101963 has its CatchHandler @ 001019af */
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::push_back(local_58,(short *)&local_5a);
+  std::list<short,std::allocator<short>>::list(local_38,(list *)local_58);
+                    /* try { // try from 0010196b to 0010196f has its CatchHandler @ 0010199a */
+  goodB2GSink((list)local_38);
+  std::list<short,std::allocator<short>>::~list(local_38);
+  std::list<short,std::allocator<short>>::~list(local_58);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+/* std::_List_const_iterator<short>::TEMPNAMEPLACEHOLDERVALUE() const */
+
+void __thiscall std::_List_const_iterator<short>::operator*(_List_const_iterator<short> *this)
+
+{
+  _List_node<short>::_M_valptr(*(_List_node<short> **)this);
+  return;
+}
+
+
+
+
+/* std::allocator<std::_List_node<short> >::~allocator() */
+
+void __thiscall
+std::allocator<std::_List_node<short>>::~allocator(allocator<std::_List_node<short>> *this)
+
+{
+  new_allocator<std::_List_node<short>>::~new_allocator
+            ((new_allocator<std::_List_node<short>> *)this);
+  return;
+}
+
+
+
+
+/* __aligned_membuf<short>::_M_addr() */
+
+__aligned_membuf<short> * __thiscall __aligned_membuf<short>::_M_addr(__aligned_membuf<short> *this)
+
+{
+  return this;
+}
+
+
+
+
+/* void std::allocator_traits<std::allocator<std::_List_node<short> >
+   >::destroy<short>(std::allocator<std::_List_node<short> >&, short*) */
+
+void std::allocator_traits<std::allocator<std::_List_node<short>>>::destroy<short>
+               (allocator *param_1,short *param_2)
+
+{
+  new_allocator<std::_List_node<short>>::destroy<short>((short *)param_1);
+  return;
+}
+
+
+
+
+/* __aligned_membuf<short>::_M_addr() const */
+
+__aligned_membuf<short> * __thiscall __aligned_membuf<short>::_M_addr(__aligned_membuf<short> *this)
+
+{
+  return this;
+}
+
+
+
+
+/* std::_List_const_iterator<short>::TEMPNAMEPLACEHOLDERVALUE() */
+
+_List_const_iterator<short> * __thiscall
+std::_List_const_iterator<short>::operator++(_List_const_iterator<short> *this)
+
+{
+  *(undefined8 *)this = **(undefined8 **)this;
+  return this;
+}
+
+
+
+
+/* std::__allocated_ptr<std::allocator<std::_List_node<short> > >::~__allocated_ptr() */
+
+void __thiscall
+std::__allocated_ptr<std::allocator<std::_List_node<short>>>::~__allocated_ptr
+          (__allocated_ptr<std::allocator<std::_List_node<short>>> *this)
+
+{
+  if (*(long *)(this + 8) != 0) {
+    allocator_traits<std::allocator<std::_List_node<short>>>::deallocate
+              (*(allocator **)this,*(_List_node **)(this + 8),1);
+  }
+  return;
+}
+
+
+
+
+void stdThreadLockDestroy(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_destroy(param_1);
+  free(param_1);
+  return;
+}
+
+
+
+
+void printShortLine(short param_1)
+
+{
+  printf("%hd\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+/* std::__allocated_ptr<std::allocator<std::_List_node<short> >
+   >::__allocated_ptr(std::allocator<std::_List_node<short> >&, std::_List_node<short>*) */
+
+void __thiscall
+std::__allocated_ptr<std::allocator<std::_List_node<short>>>::__allocated_ptr
+          (__allocated_ptr<std::allocator<std::_List_node<short>>> *this,allocator *param_1,
+          _List_node *param_2)
+
+{
+  allocator *paVar1;
+  
+  paVar1 = __addressof<std::allocator<std::_List_node<short>>>(param_1);
+  *(allocator **)this = paVar1;
+  *(_List_node **)(this + 8) = param_2;
+  return;
+}
+
+
+
+
+/* CWE191_Integer_Underflow__short_rand_multiply_73::goodG2BSink(std::list<short,
+   std::allocator<short> >) */
+
+void CWE191_Integer_Underflow__short_rand_multiply_73::goodG2BSink(list param_1)
+
+{
+  short *psVar1;
+  undefined4 in_register_0000003c;
+  
+  psVar1 = (short *)std::list<short,std::allocator<short>>::back
+                              ((list<short,std::allocator<short>> *)
+                               CONCAT44(in_register_0000003c,param_1));
+  if (*psVar1 < 0) {
+    printIntLine((int)(short)(*psVar1 * 2));
+  }
+  return;
+}
+
+
+
+
+/* __aligned_membuf<short>::_M_ptr() */
+
+void __thiscall __aligned_membuf<short>::_M_ptr(__aligned_membuf<short> *this)
+
+{
+  _M_addr(this);
+  return;
+}
+
+
+
+
+/* std::list<short, std::allocator<short> >::end() const */
+
+undefined8 __thiscall
+std::list<short,std::allocator<short>>::end(list<short,std::allocator<short>> *this)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  _List_const_iterator<short>::_List_const_iterator
+            ((_List_const_iterator<short> *)&local_18,(_List_node_base *)this);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void stdThreadLockRelease(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_unlock(param_1);
+  return;
+}
+
+
+
