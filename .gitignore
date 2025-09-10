@@ -3,3 +3,4 @@ workspace/
 Test_Ground_Ghidra_Projects/
 decompiler.py
 orchestrator.py
+Smaug.py
