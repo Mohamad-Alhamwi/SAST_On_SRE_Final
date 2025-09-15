@@ -1,0 +1,1833 @@
+
+void FUN_00102de2(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101d55(void)
+
+{
+  FUN_0010193c();
+  FUN_00101ae9();
+  return;
+}
+
+
+
+
+void FUN_00102ded(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101f6e(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  undefined local_21;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  uVar1 = FUN_0010219a(param_2);
+  FUN_00102149(&local_21,uVar1);
+  FUN_001021ac(param_1,&local_21);
+  FUN_00101ee8(&local_21);
+  uVar1 = FUN_00102234(param_2);
+  uVar2 = FUN_001021e4(param_2);
+                    /* try { // try from 00101ffa to 00101ffe has its CatchHandler @ 00102001 */
+  FUN_00102280(param_1,uVar2,uVar1);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_001022de(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_0010264e(undefined8 *param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = FUN_001027b1(param_2);
+  *param_1 = uVar1;
+  param_1[1] = param_3;
+  return;
+}
+
+
+
+
+long FUN_00102704(long param_1)
+
+{
+  *(undefined8 *)(param_1 + 8) = 0;
+  return param_1;
+}
+
+
+
+
+void FUN_0010206a(undefined8 *param_1)
+
+{
+  undefined8 *puVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  undefined8 local_20;
+  
+  local_20 = (undefined8 *)*param_1;
+  while (local_20 != param_1) {
+    puVar1 = (undefined8 *)*local_20;
+    uVar2 = FUN_0010167e(local_20);
+    uVar3 = FUN_001022ee(param_1);
+    FUN_00102300(uVar3,uVar2);
+    FUN_0010232a(param_1,local_20);
+    local_20 = puVar1;
+  }
+  return;
+}
+
+
+
+
+void FUN_0010262a(undefined8 param_1)
+
+{
+  FUN_00102783(param_1,1);
+  return;
+}
+
+
+
+
+void FUN_00102dcc(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102574(undefined8 *param_1)
+
+{
+  FUN_0010273a(*param_1);
+  return;
+}
+
+
+
+
+void FUN_00101660(undefined8 *param_1,undefined8 param_2)
+
+{
+  *param_1 = param_2;
+  return;
+}
+
+
+
+
+void FUN_00102acf(undefined8 param_1)
+
+{
+  printf("%g\n",param_1);
+  return;
+}
+
+
+
+
+void FUN_00102afd(uint *param_1)
+
+{
+  printf("%d -- %d\n",(ulong)*param_1,(ulong)param_1[1]);
+  return;
+}
+
+
+
+
+void FUN_00102b30(long param_1,ulong param_2)
+
+{
+  ulong local_10;
+  
+  for (local_10 = 0; local_10 < param_2; local_10 = local_10 + 1) {
+    printf("%02x",(ulong)*(byte *)(local_10 + param_1));
+  }
+  puts("");
+  return;
+}
+
+
+
+
+void FUN_00101ee8(undefined8 param_1)
+
+{
+  FUN_0010205a(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00102fd0(void *param_1)
+
+{
+  free(param_1);
+  return 1;
+}
+
+
+
+
+void FUN_00101e5c(undefined8 param_1)
+
+{
+  FUN_00101ebc(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_001021e4(undefined8 *param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_0010250c(&local_18,*param_1);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_00101ebc(undefined8 param_1)
+
+{
+  FUN_0010203a(param_1);
+  FUN_00101de6(param_1);
+  return;
+}
+
+
+
+
+void FUN_0010193c(void)
+
+{
+  long in_FS_OFFSET;
+  undefined8 *local_d0;
+  undefined local_c8 [32];
+  undefined local_a8 [32];
+  undefined8 local_88;
+  undefined8 local_80;
+  undefined8 local_78;
+  undefined8 local_70;
+  undefined8 local_68;
+  undefined8 local_60;
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined8 local_48;
+  undefined8 local_40;
+  undefined8 local_38;
+  undefined8 local_30;
+  undefined4 local_28;
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101e7c(local_c8);
+  local_78 = 0;
+  local_70 = 0;
+  local_68 = 0;
+  local_60 = 0;
+  local_58 = 0;
+  local_50 = 0;
+  local_48 = 0;
+  local_40 = 0;
+  local_38 = 0;
+  local_30 = 0;
+  local_28 = 0;
+  local_d0 = &local_88;
+  local_88 = 0x7274736465786966;
+  local_80 = 0x74736574676e69;
+                    /* try { // try from 00101a12 to 00101a61 has its CatchHandler @ 00101ab9 */
+  FUN_00101f34(local_c8,&local_d0);
+  FUN_00101f34(local_c8,&local_d0);
+  FUN_00101f34(local_c8,&local_d0);
+  FUN_00101f6e(local_a8,local_c8);
+                    /* try { // try from 00101a6c to 00101a70 has its CatchHandler @ 00101aa1 */
+  FUN_001014ea(local_a8);
+  FUN_00101e9c(local_a8);
+  FUN_00101e9c(local_c8);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+undefined8 FUN_00102359(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+void FUN_0010163e(undefined8 *param_1)
+
+{
+  FUN_0010167e(*param_1);
+  return;
+}
+
+
+
+
+void FUN_0010167e(long param_1)
+
+{
+  FUN_001016a0(param_1 + 0x10);
+  return;
+}
+
+
+
+
+void FUN_001025f7(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  FUN_0010275c(param_1,param_2,param_3);
+  return;
+}
+
+
+
+
+void FUN_00102688(undefined8 *param_1)
+
+{
+  if (param_1[1] != 0) {
+    FUN_001025f7(*param_1,param_1[1],1);
+  }
+  return;
+}
+
+
+
+
+void FUN_00102436(long param_1,long param_2)
+
+{
+  *(long *)(param_1 + 0x10) = *(long *)(param_1 + 0x10) + param_2;
+  return;
+}
+
+
+
+
+/* WARNING: Removing unreachable block (ram,0x00101444) */
+/* WARNING: Removing unreachable block (ram,0x00101450) */
+
+void FUN_00101420(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001014a9(undefined8 param_1)
+
+{
+  undefined8 *puVar1;
+  
+  puVar1 = (undefined8 *)FUN_00101570(param_1);
+  fprintf(stdout,(char *)*puVar1);
+  return;
+}
+
+
+
+
+undefined8 FUN_001016be(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+void FUN_00102920(short param_1)
+
+{
+  printf("%hd\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+int FUN_00102d91(void)
+
+{
+  int iVar1;
+  
+  iVar1 = rand();
+  return iVar1 % 2;
+}
+
+
+
+
+void FUN_00102e3a(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001030aa(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_destroy(param_1);
+  free(param_1);
+  return;
+}
+
+
+
+
+void FUN_001028a0(char *param_1)
+
+{
+  if (param_1 != (char *)0x0) {
+    puts(param_1);
+  }
+  return;
+}
+
+
+
+
+undefined8 FUN_00102460(undefined8 param_1,undefined8 param_2)
+
+{
+  FUN_0010248e(param_1,param_2);
+  return param_1;
+}
+
+
+
+
+void FUN_00102783(undefined8 param_1,undefined8 param_2)
+
+{
+  FUN_00102826(param_1,param_2,0);
+  return;
+}
+
+
+
+
+void FUN_0010275c(undefined8 param_1,void *param_2)
+
+{
+  operator_delete(param_2);
+  return;
+}
+
+
+
+
+void FUN_00101f08(undefined8 param_1)
+
+{
+  FUN_0010206a(param_1);
+  FUN_00101e3c(param_1);
+  return;
+}
+
+
+
+
+void FUN_0010294c(float param_1)
+
+{
+  printf("%f\n",(double)param_1);
+  return;
+}
+
+
+
+
+void FUN_001029a1(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_0010252a(long *param_1,long *param_2)
+
+{
+  return CONCAT71((int7)((ulong)*param_2 >> 8),*param_1 != *param_2);
+}
+
+
+
+
+void FUN_001020e8(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  _List_node_base *p_Var2;
+  
+  uVar1 = FUN_00102359(param_3);
+  p_Var2 = (_List_node_base *)FUN_0010236c(param_1,uVar1);
+  std::__detail::_List_node_base::_M_hook(p_Var2);
+  FUN_00102436(param_1,1);
+  return;
+}
+
+
+
+
+void FUN_0010250c(undefined8 *param_1,undefined8 param_2)
+
+{
+  *param_1 = param_2;
+  return;
+}
+
+
+
+
+undefined8 FUN_00102ff3(undefined8 *param_1)
+
+{
+  int iVar1;
+  pthread_mutex_t *__mutex;
+  undefined8 uVar2;
+  
+  *param_1 = 0;
+  __mutex = (pthread_mutex_t *)malloc(0x28);
+  if (__mutex == (pthread_mutex_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    iVar1 = pthread_mutex_init(__mutex,(pthread_mutexattr_t *)0x0);
+    if (iVar1 == 0) {
+      *param_1 = __mutex;
+      uVar2 = 1;
+    }
+    else {
+      free(param_1);
+      uVar2 = 0;
+    }
+  }
+  return uVar2;
+}
+
+
+
+
+undefined8 FUN_00102d73(void)
+
+{
+  return 1;
+}
+
+
+
+
+ulong FUN_00102c94(long param_1,ulong param_2,long param_3)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8));
+    if (iVar1 == 0) break;
+    iVar1 = iswxdigit(*(wint_t *)(param_3 + local_18 * 8 + 4));
+    if (iVar1 == 0) break;
+    __isoc99_swscanf(local_18 * 8 + param_3,&DAT_001040ac,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_001016d0(void)
+
+{
+  char *pcVar1;
+  long in_FS_OFFSET;
+  char *local_d8;
+  size_t local_d0;
+  undefined local_c8 [32];
+  undefined local_a8 [32];
+  char local_88 [104];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101e7c(local_c8);
+  local_88[0] = '\0';
+  local_88[1] = '\0';
+  local_88[2] = '\0';
+  local_88[3] = '\0';
+  local_88[4] = '\0';
+  local_88[5] = '\0';
+  local_88[6] = '\0';
+  local_88[7] = '\0';
+  local_88[8] = '\0';
+  local_88[9] = '\0';
+  local_88[10] = '\0';
+  local_88[0xb] = '\0';
+  local_88[0xc] = '\0';
+  local_88[0xd] = '\0';
+  local_88[0xe] = '\0';
+  local_88[0xf] = '\0';
+  local_88[0x10] = '\0';
+  local_88[0x11] = '\0';
+  local_88[0x12] = '\0';
+  local_88[0x13] = '\0';
+  local_88[0x14] = '\0';
+  local_88[0x15] = '\0';
+  local_88[0x16] = '\0';
+  local_88[0x17] = '\0';
+  local_88[0x18] = '\0';
+  local_88[0x19] = '\0';
+  local_88[0x1a] = '\0';
+  local_88[0x1b] = '\0';
+  local_88[0x1c] = '\0';
+  local_88[0x1d] = '\0';
+  local_88[0x1e] = '\0';
+  local_88[0x1f] = '\0';
+  local_88[0x20] = '\0';
+  local_88[0x21] = '\0';
+  local_88[0x22] = '\0';
+  local_88[0x23] = '\0';
+  local_88[0x24] = '\0';
+  local_88[0x25] = '\0';
+  local_88[0x26] = '\0';
+  local_88[0x27] = '\0';
+  local_88[0x28] = '\0';
+  local_88[0x29] = '\0';
+  local_88[0x2a] = '\0';
+  local_88[0x2b] = '\0';
+  local_88[0x2c] = '\0';
+  local_88[0x2d] = '\0';
+  local_88[0x2e] = '\0';
+  local_88[0x2f] = '\0';
+  local_88[0x30] = '\0';
+  local_88[0x31] = '\0';
+  local_88[0x32] = '\0';
+  local_88[0x33] = '\0';
+  local_88[0x34] = '\0';
+  local_88[0x35] = '\0';
+  local_88[0x36] = '\0';
+  local_88[0x37] = '\0';
+  local_88[0x38] = '\0';
+  local_88[0x39] = '\0';
+  local_88[0x3a] = '\0';
+  local_88[0x3b] = '\0';
+  local_88[0x3c] = '\0';
+  local_88[0x3d] = '\0';
+  local_88[0x3e] = '\0';
+  local_88[0x3f] = '\0';
+  local_88[0x40] = '\0';
+  local_88[0x41] = '\0';
+  local_88[0x42] = '\0';
+  local_88[0x43] = '\0';
+  local_88[0x44] = '\0';
+  local_88[0x45] = '\0';
+  local_88[0x46] = '\0';
+  local_88[0x47] = '\0';
+  local_88[0x48] = '\0';
+  local_88[0x49] = '\0';
+  local_88[0x4a] = '\0';
+  local_88[0x4b] = '\0';
+  local_88[0x4c] = '\0';
+  local_88[0x4d] = '\0';
+  local_88[0x4e] = '\0';
+  local_88[0x4f] = '\0';
+  local_88[0x50] = '\0';
+  local_88[0x51] = '\0';
+  local_88[0x52] = '\0';
+  local_88[0x53] = '\0';
+  local_88[0x54] = '\0';
+  local_88[0x55] = '\0';
+  local_88[0x56] = '\0';
+  local_88[0x57] = '\0';
+  local_88[0x58] = '\0';
+  local_88[0x59] = '\0';
+  local_88[0x5a] = '\0';
+  local_88[0x5b] = '\0';
+  local_88[0x5c] = '\0';
+  local_88[0x5d] = '\0';
+  local_88[0x5e] = '\0';
+  local_88[0x5f] = '\0';
+  local_88[0x60] = '\0';
+  local_88[0x61] = '\0';
+  local_88[0x62] = '\0';
+  local_88[99] = '\0';
+  local_d8 = local_88;
+  local_d0 = strlen(local_d8);
+  if (1 < 100 - local_d0) {
+                    /* try { // try from 001017cc to 001018b4 has its CatchHandler @ 0010190c */
+    pcVar1 = fgets(local_d8 + local_d0,100 - (int)local_d0,stdin);
+    if (pcVar1 == (char *)0x0) {
+      FUN_001028a0("fgets() failed");
+      local_d8[local_d0] = '\0';
+    }
+    else {
+      local_d0 = strlen(local_d8);
+      if ((local_d0 != 0) && (local_d8[local_d0 - 1] == '\n')) {
+        local_d8[local_d0 - 1] = '\0';
+      }
+    }
+  }
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f6e(local_a8,local_c8);
+                    /* try { // try from 001018bf to 001018c3 has its CatchHandler @ 001018f4 */
+  FUN_001014a9(local_a8);
+  FUN_00101e9c(local_a8);
+  FUN_00101e9c(local_c8);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_001027c4(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  undefined8 *puVar2;
+  
+  puVar2 = (undefined8 *)FUN_00102359(param_3);
+  uVar1 = *puVar2;
+  puVar2 = (undefined8 *)FUN_00101dcf(8,param_2);
+  *puVar2 = uVar1;
+  return;
+}
+
+
+
+
+void FUN_00102e45(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 * FUN_00102550(undefined8 *param_1)
+
+{
+  *param_1 = *(undefined8 *)*param_1;
+  return param_1;
+}
+
+
+
+
+undefined8 FUN_0010219a(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+undefined8 FUN_00101d6a(void)
+
+{
+  time_t tVar1;
+  
+  tVar1 = time((time_t *)0x0);
+  srand((uint)tVar1);
+  FUN_001028a0("Calling good()...");
+  FUN_00101d55();
+  FUN_001028a0("Finished good()");
+  FUN_001028a0("Calling bad()...");
+  FUN_001016d0();
+  FUN_001028a0("Finished bad()");
+  return 0;
+}
+
+
+
+
+void FUN_00102e2f(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 FUN_00102ea8(pthread_t param_1,pthread_t param_2,undefined8 *param_3)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  pthread_t local_20;
+  pthread_t *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  *param_3 = 0;
+  local_18 = (pthread_t *)malloc(0x18);
+  if (local_18 == (pthread_t *)0x0) {
+    uVar2 = 0;
+  }
+  else {
+    local_18[1] = param_1;
+    local_18[2] = param_2;
+    iVar1 = pthread_create(&local_20,(pthread_attr_t *)0x0,FUN_00102e71,local_18);
+    if (iVar1 == 0) {
+      *local_18 = local_20;
+      *param_3 = local_18;
+      uVar2 = 1;
+    }
+    else {
+      free(local_18);
+      uVar2 = 0;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar2;
+}
+
+
+
+
+void FUN_00102df8(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 FUN_001015ce(undefined8 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101660(&local_18,param_1);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_00102596(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  
+  uVar1 = FUN_00102359(param_2);
+  uVar2 = FUN_001015ce(param_1);
+  FUN_001020e8(param_1,uVar2,uVar1);
+  return;
+}
+
+
+
+
+void FUN_00103150(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102e24(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 FUN_001027b1(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+undefined8 FUN_00102149(undefined8 param_1,undefined8 param_2)
+
+{
+  long lVar1;
+  long in_FS_OFFSET;
+  
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00102460(param_1,param_2);
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return param_1;
+}
+
+
+
+
+undefined8 FUN_00102d82(void)
+
+{
+  return 0;
+}
+
+
+
+
+void FUN_00102e71(long param_1)
+
+{
+  (**(code **)(param_1 + 8))(*(undefined8 *)(param_1 + 0x10));
+                    /* WARNING: Subroutine does not return */
+  pthread_exit((void *)0x0);
+}
+
+
+
+
+void FUN_00101e06(undefined8 *param_1)
+
+{
+  param_1[1] = param_1;
+  *param_1 = param_1[1];
+  param_1[2] = 0;
+  return;
+}
+
+
+
+
+void FUN_001021ac(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = FUN_001024b8(param_2);
+  FUN_001024ca(param_1,uVar1);
+  return;
+}
+
+
+
+
+void FUN_001016a0(undefined8 param_1)
+
+{
+  FUN_001016be(param_1);
+  return;
+}
+
+
+
+
+void FUN_00102db6(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 FUN_0010236c(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  long in_FS_OFFSET;
+  undefined local_38 [24];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  uVar1 = FUN_0010262a(param_1);
+  uVar2 = FUN_001022ee(param_1);
+  FUN_0010264e(local_38,uVar2,uVar1);
+  uVar3 = FUN_00102359(param_2);
+  uVar4 = FUN_0010167e(uVar1);
+  FUN_001026c7(uVar2,uVar4,uVar3);
+  FUN_00102704(local_38,0);
+  FUN_00102688(local_38);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return uVar1;
+}
+
+
+
+
+void FUN_00102aa4(byte param_1)
+
+{
+  printf("%02x\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void FUN_0010308b(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_unlock(param_1);
+  return;
+}
+
+
+
+
+void FUN_00102dab(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_0010205a(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102300(undefined8 param_1,undefined8 param_2)
+
+{
+  FUN_001025e4(param_1,param_2);
+  return;
+}
+
+
+
+
+void FUN_00102726(void)
+
+{
+  return;
+}
+
+
+
+
+/* WARNING: Removing unreachable block (ram,0x00101403) */
+/* WARNING: Removing unreachable block (ram,0x0010140f) */
+
+void FUN_001013f0(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_0010273a(long param_1)
+
+{
+  FUN_00102808(param_1 + 0x10);
+  return;
+}
+
+
+
+
+void FUN_00101e3c(undefined8 param_1)
+
+{
+  FUN_00101ee8(param_1);
+  return;
+}
+
+
+
+
+void FUN_00102e19(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102e50(void)
+
+{
+  return;
+}
+
+
+
+
+long * FUN_0010161a(long *param_1)
+
+{
+  *param_1 = *(long *)(*param_1 + 8);
+  return param_1;
+}
+
+
+
+
+void FUN_00102280(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  char cVar1;
+  undefined8 uVar2;
+  undefined8 local_20;
+  undefined8 local_18;
+  undefined8 local_10;
+  
+  local_20 = param_3;
+  local_18 = param_2;
+  local_10 = param_1;
+  while( true ) {
+    cVar1 = FUN_0010252a(&local_18,&local_20);
+    if (cVar1 == '\0') break;
+    uVar2 = FUN_00102574(&local_18);
+    FUN_00102596(local_10,uVar2);
+    FUN_00102550(&local_18);
+  }
+  return;
+}
+
+
+
+
+void FUN_0010248e(undefined8 param_1,undefined8 param_2)
+
+{
+  FUN_00102726(param_1,param_2);
+  return;
+}
+
+
+
+
+void FUN_001024ca(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = FUN_001024b8(param_2);
+  FUN_0010248e(param_1,uVar1);
+  FUN_00101de6(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00102234(undefined8 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_0010250c(&local_18,param_1);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+undefined8 FUN_001022ee(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+void FUN_001028f8(uint param_1)
+
+{
+  printf("%d\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void FUN_0010152b(undefined8 param_1)
+
+{
+  undefined8 *puVar1;
+  
+  puVar1 = (undefined8 *)FUN_00101570(param_1);
+  fprintf(stdout,"%s\n",*puVar1);
+  return;
+}
+
+
+
+
+void FUN_00101ae9(void)
+
+{
+  char *pcVar1;
+  long in_FS_OFFSET;
+  char *local_d8;
+  size_t local_d0;
+  undefined local_c8 [32];
+  undefined local_a8 [32];
+  char local_88 [104];
+  long local_20;
+  
+  local_20 = *(long *)(in_FS_OFFSET + 0x28);
+  FUN_00101e7c(local_c8);
+  local_88[0] = '\0';
+  local_88[1] = '\0';
+  local_88[2] = '\0';
+  local_88[3] = '\0';
+  local_88[4] = '\0';
+  local_88[5] = '\0';
+  local_88[6] = '\0';
+  local_88[7] = '\0';
+  local_88[8] = '\0';
+  local_88[9] = '\0';
+  local_88[10] = '\0';
+  local_88[0xb] = '\0';
+  local_88[0xc] = '\0';
+  local_88[0xd] = '\0';
+  local_88[0xe] = '\0';
+  local_88[0xf] = '\0';
+  local_88[0x10] = '\0';
+  local_88[0x11] = '\0';
+  local_88[0x12] = '\0';
+  local_88[0x13] = '\0';
+  local_88[0x14] = '\0';
+  local_88[0x15] = '\0';
+  local_88[0x16] = '\0';
+  local_88[0x17] = '\0';
+  local_88[0x18] = '\0';
+  local_88[0x19] = '\0';
+  local_88[0x1a] = '\0';
+  local_88[0x1b] = '\0';
+  local_88[0x1c] = '\0';
+  local_88[0x1d] = '\0';
+  local_88[0x1e] = '\0';
+  local_88[0x1f] = '\0';
+  local_88[0x20] = '\0';
+  local_88[0x21] = '\0';
+  local_88[0x22] = '\0';
+  local_88[0x23] = '\0';
+  local_88[0x24] = '\0';
+  local_88[0x25] = '\0';
+  local_88[0x26] = '\0';
+  local_88[0x27] = '\0';
+  local_88[0x28] = '\0';
+  local_88[0x29] = '\0';
+  local_88[0x2a] = '\0';
+  local_88[0x2b] = '\0';
+  local_88[0x2c] = '\0';
+  local_88[0x2d] = '\0';
+  local_88[0x2e] = '\0';
+  local_88[0x2f] = '\0';
+  local_88[0x30] = '\0';
+  local_88[0x31] = '\0';
+  local_88[0x32] = '\0';
+  local_88[0x33] = '\0';
+  local_88[0x34] = '\0';
+  local_88[0x35] = '\0';
+  local_88[0x36] = '\0';
+  local_88[0x37] = '\0';
+  local_88[0x38] = '\0';
+  local_88[0x39] = '\0';
+  local_88[0x3a] = '\0';
+  local_88[0x3b] = '\0';
+  local_88[0x3c] = '\0';
+  local_88[0x3d] = '\0';
+  local_88[0x3e] = '\0';
+  local_88[0x3f] = '\0';
+  local_88[0x40] = '\0';
+  local_88[0x41] = '\0';
+  local_88[0x42] = '\0';
+  local_88[0x43] = '\0';
+  local_88[0x44] = '\0';
+  local_88[0x45] = '\0';
+  local_88[0x46] = '\0';
+  local_88[0x47] = '\0';
+  local_88[0x48] = '\0';
+  local_88[0x49] = '\0';
+  local_88[0x4a] = '\0';
+  local_88[0x4b] = '\0';
+  local_88[0x4c] = '\0';
+  local_88[0x4d] = '\0';
+  local_88[0x4e] = '\0';
+  local_88[0x4f] = '\0';
+  local_88[0x50] = '\0';
+  local_88[0x51] = '\0';
+  local_88[0x52] = '\0';
+  local_88[0x53] = '\0';
+  local_88[0x54] = '\0';
+  local_88[0x55] = '\0';
+  local_88[0x56] = '\0';
+  local_88[0x57] = '\0';
+  local_88[0x58] = '\0';
+  local_88[0x59] = '\0';
+  local_88[0x5a] = '\0';
+  local_88[0x5b] = '\0';
+  local_88[0x5c] = '\0';
+  local_88[0x5d] = '\0';
+  local_88[0x5e] = '\0';
+  local_88[0x5f] = '\0';
+  local_88[0x60] = '\0';
+  local_88[0x61] = '\0';
+  local_88[0x62] = '\0';
+  local_88[99] = '\0';
+  local_d8 = local_88;
+  local_d0 = strlen(local_d8);
+  if (1 < 100 - local_d0) {
+                    /* try { // try from 00101be5 to 00101ccd has its CatchHandler @ 00101d25 */
+    pcVar1 = fgets(local_d8 + local_d0,100 - (int)local_d0,stdin);
+    if (pcVar1 == (char *)0x0) {
+      FUN_001028a0("fgets() failed");
+      local_d8[local_d0] = '\0';
+    }
+    else {
+      local_d0 = strlen(local_d8);
+      if ((local_d0 != 0) && (local_d8[local_d0 - 1] == '\n')) {
+        local_d8[local_d0 - 1] = '\0';
+      }
+    }
+  }
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f34(local_c8,&local_d8);
+  FUN_00101f6e(local_a8,local_c8);
+                    /* try { // try from 00101cd8 to 00101cdc has its CatchHandler @ 00101d0d */
+  FUN_0010152b(local_a8);
+  FUN_00101e9c(local_a8);
+  FUN_00101e9c(local_c8);
+  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_001025e4(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001029f7(char param_1)
+
+{
+  printf("%02x\n",(ulong)(uint)(int)param_1);
+  return;
+}
+
+
+
+
+void FUN_00102e0e(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001028c6(long param_1)
+
+{
+  if (param_1 != 0) {
+    wprintf(L"%ls\n",param_1);
+  }
+  return;
+}
+
+
+
+
+void FUN_00102e03(void)
+
+{
+  return;
+}
+
+
+
+
+undefined8 FUN_00101dcf(undefined8 param_1,undefined8 param_2)
+
+{
+  return param_2;
+}
+
+
+
+
+void FUN_001014ea(undefined8 param_1)
+
+{
+  undefined8 *puVar1;
+  
+  puVar1 = (undefined8 *)FUN_00101570(param_1);
+  fprintf(stdout,(char *)*puVar1);
+  return;
+}
+
+
+
+
+undefined8 FUN_001024b8(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+bool FUN_00102f75(pthread_t *param_1)
+
+{
+  int iVar1;
+  long in_FS_OFFSET;
+  void *local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  iVar1 = pthread_join(*param_1,&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return iVar1 == 0;
+}
+
+
+
+
+void FUN_001029cc(undefined8 param_1)
+
+{
+  printf("%zu\n",param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00102888(void)
+
+{
+  return 0x555555555555555;
+}
+
+
+
+
+void FUN_00102976(undefined8 param_1)
+
+{
+  printf("%ld\n",param_1);
+  return;
+}
+
+
+
+
+void FUN_00102a22(undefined4 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  local_18 = param_1;
+  printf("%ls\n",&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_00102dc1(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_001030e0(undefined4 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  long lVar1;
+  
+  _DT_INIT();
+  lVar1 = 0;
+  do {
+    (*(code *)(&__DT_INIT_ARRAY)[lVar1])(param_1,param_2,param_3);
+    lVar1 = lVar1 + 1;
+  } while (lVar1 != 1);
+  return;
+}
+
+
+
+
+void FUN_00102e5b(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00102dd7(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_0010306c(pthread_mutex_t *param_1)
+
+{
+  pthread_mutex_lock(param_1);
+  return;
+}
+
+
+
+
+void FUN_00101020(void)
+
+{
+  (*(code *)PTR_00106ef0)();
+  return;
+}
+
+
+
+
+void FUN_0010203a(undefined8 param_1)
+
+{
+  FUN_001022de(param_1);
+  return;
+}
+
+
+
+
+void FUN_00102826(undefined8 param_1,ulong param_2)
+
+{
+  ulong uVar1;
+  
+  uVar1 = FUN_00102888(param_1);
+  if (uVar1 < param_2) {
+    std::__throw_bad_alloc();
+  }
+  operator_new(param_2 * 0x18);
+  return;
+}
+
+
+
+
+void FUN_00102a7c(uint param_1)
+
+{
+  printf("%u\n",(ulong)param_1);
+  return;
+}
+
+
+
+
+void FUN_001026c7(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = FUN_00102359(param_3);
+  FUN_001027c4(param_1,param_2,uVar1);
+  return;
+}
+
+
+
+
+void _FINI_0(void)
+
+{
+  if (DAT_00107038 == '\0') {
+    if (PTR___cxa_finalize_00106fd8 != (undefined *)0x0) {
+      __cxa_finalize(PTR_LOOP_00107008);
+    }
+    FUN_001013f0();
+    DAT_00107038 = 1;
+    return;
+  }
+  return;
+}
+
+
+
+
+void FUN_00101de6(undefined8 param_1)
+
+{
+  FUN_00101e06(param_1);
+  return;
+}
+
+
+
+
+void FUN_00101f34(undefined8 param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  
+  uVar1 = FUN_001015ce(param_1);
+  FUN_001020e8(param_1,uVar1,param_2);
+  return;
+}
+
+
+
+
+ulong FUN_00102b90(long param_1,ulong param_2,long param_3)
+
+{
+  ushort **ppuVar1;
+  long in_FS_OFFSET;
+  undefined local_1c [4];
+  ulong local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  for (local_18 = 0; local_18 < param_2; local_18 = local_18 + 1) {
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2)] & 0x1000) == 0) break;
+    ppuVar1 = __ctype_b_loc();
+    if (((*ppuVar1)[*(char *)(param_3 + local_18 * 2 + 1)] & 0x1000) == 0) break;
+    __isoc99_sscanf(local_18 * 2 + param_3,&DAT_001040a4,local_1c);
+    *(char *)(local_18 + param_1) = local_1c[0];
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_18;
+}
+
+
+
+
+void FUN_00102e66(void)
+
+{
+  return;
+}
+
+
+
+
+void FUN_00101570(undefined8 param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined8 local_18;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_18 = FUN_001015ce(param_1);
+  FUN_0010161a(&local_18);
+  FUN_0010163e(&local_18);
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+
+
+void FUN_00102808(undefined8 param_1)
+
+{
+  FUN_00102876(param_1);
+  return;
+}
+
+
+
+
+undefined8 FUN_00102876(undefined8 param_1)
+
+{
+  return param_1;
+}
+
+
+
+
+void FUN_00101e9c(undefined8 param_1)
+
+{
+  FUN_00101f08(param_1);
+  return;
+}
+
+
+
+
+void FUN_00101e7c(undefined8 param_1)
+
+{
+  FUN_00101e5c(param_1);
+  return;
+}
+
+
+
+
+void FUN_0010232a(undefined8 param_1,undefined8 param_2)
+
+{
+  FUN_001025f7(param_1,param_2,1);
+  return;
+}
+
+
+
